@@ -1,0 +1,23 @@
+[project]
+name = "gemini-channels-agent"
+version = "0.1.0"
+description = "A Gemini-on-Vertex-AI agent that uses the Slack MCP server to summarise channel activity, search messages, and digest incident threads."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "google-adk>=0.4.0",
+  "mcp>=1.0.0",
+  "streamlit>=1.32",
+]
+license = { text = "Apache-2.0" }
+authors = [{ name = "Mukunda Katta" }]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["agent", "app"]
